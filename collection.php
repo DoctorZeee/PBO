@@ -1,33 +1,6 @@
 <?php
 
 /**
- * ============================================================================
- * PERBEDAAN ARRAY vs COLLECTION
- * ============================================================================
- * 
- * ARRAY (Built-in PHP):
- * - Struktur data bawaan PHP yang fleksibel
- * - Bisa menyimpan berbagai tipe data
- * - Tidak ada kontrak/interface yang jelas
- * - Tidak ada enkapsulasi, langsung akses elemen
- * - Tidak ada type safety
- * - Contoh: $arr = [1, 2, 3]; $arr[0] = "text";
- * 
- * COLLECTION (OOP Approach):
- * - Objek yang membungkus array dengan behavior tertentu
- * - Punya kontrak yang jelas lewat interface
- * - Ada enkapsulasi dan kontrol akses
- * - Ada validasi dan type safety
- * - Lebih maintainable dan testable
- * - Mendukung polymorphism
- * - Contoh: $list = new ArrayList(); $list->add(1);
- * 
- * ============================================================================
- */
-
-// ==================== INTERFACES ====================
-
-/**
  * CollectionInterface - Interface dasar untuk semua collection
  */
 interface CollectionInterface
@@ -97,8 +70,6 @@ interface CustomIteratorInterface
     public function current();
     public function reset(): void;
 }
-
-// ==================== IMPLEMENTATIONS ====================
 
 /**
  * ArrayList - Implementasi List menggunakan array dinamis
