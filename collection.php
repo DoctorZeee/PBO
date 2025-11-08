@@ -1,19 +1,19 @@
 <?php
 
 /**
- * CollectionInterface - Interface dasar untuk semua collection
+ * CollectionInterface
  */
 interface CollectionInterface
 {
-    public function size(): int;
-    public function isEmpty(): bool;
-    public function clear(): void;
-    public function contains($element): bool;
-    public function toArray(): array;
+    public function size(): int;                     //Hitung jumlah item
+    public function isEmpty(): bool;                 //Cek kosong
+    public function clear(): void;                   //Hapus semua
+    public function contains($element): bool;        //Cek apakah ada
+    public function toArray(): array;                //Ubah ke Array
 }
 
 /**
- * ListInterface - Collection berurutan dengan akses index
+ * ListInterface 
  */
 interface ListInterface extends CollectionInterface
 {
@@ -27,7 +27,7 @@ interface ListInterface extends CollectionInterface
 }
 
 /**
- * QueueInterface - FIFO (First In First Out)
+ * QueueInterface
  */
 interface QueueInterface extends CollectionInterface
 {
@@ -37,7 +37,7 @@ interface QueueInterface extends CollectionInterface
 }
 
 /**
- * StackInterface - LIFO (Last In First Out)
+ * StackInterface
  */
 interface StackInterface extends CollectionInterface
 {
@@ -47,7 +47,7 @@ interface StackInterface extends CollectionInterface
 }
 
 /**
- * MapInterface - Penyimpanan key-value pairs
+ * MapInterface
  */
 interface MapInterface extends CollectionInterface
 {
@@ -61,7 +61,7 @@ interface MapInterface extends CollectionInterface
 }
 
 /**
- * IteratorInterface - Interface untuk iterasi custom
+ * IteratorInterface
  */
 interface CustomIteratorInterface
 {
@@ -72,7 +72,7 @@ interface CustomIteratorInterface
 }
 
 /**
- * ArrayList - Implementasi List menggunakan array dinamis
+ * ArrayList
  */
 class ArrayList implements ListInterface
 {
@@ -165,7 +165,7 @@ class Node
 }
 
 /**
- * LinkedList - Implementasi List menggunakan linked nodes
+ * LinkedList 
  */
 class LinkedList implements ListInterface
 {
@@ -295,7 +295,7 @@ class LinkedList implements ListInterface
 }
 
 /**
- * Stack - LIFO (Last In First Out)
+ * Stack
  */
 class Stack implements StackInterface
 {
@@ -349,7 +349,7 @@ class Stack implements StackInterface
 }
 
 /**
- * Queue - FIFO (First In First Out)
+ * Queue
  */
 class Queue implements QueueInterface
 {
@@ -403,7 +403,7 @@ class Queue implements QueueInterface
 }
 
 /**
- * HashMap - Penyimpanan key-value pairs
+ * HashMap
  */
 class HashMap implements MapInterface
 {
@@ -478,7 +478,7 @@ class HashMap implements MapInterface
 }
 
 /**
- * CollectionIterator - Iterator untuk collection
+ * CollectionIterator
  */
 class CollectionIterator implements CustomIteratorInterface
 {
